@@ -1,0 +1,34 @@
+<div ng-controller="userController">
+  <md-content layout="row" layout-fill>
+
+    <md-content layout-fill class="bg-left">
+      <img src="assets/chicken.png" width="35%">
+      <h1>MOONCHICK</h1>
+    </md-content>
+
+    <md-content layout-fill layout-align="center" class="bg-right">
+      <div class="input-section">
+        <form ng-submit="login()">
+          <div layout="column" layout-padding>
+              <md-input-container flex>
+                  <label>Username</label>
+                  <input ng-model="user.email" type="text" autofocus>
+              </md-input-container>
+          </div>
+          <div layout="column" layout-padding>
+              <md-input-container flex>
+                  <label>Password</label>
+                  <input ng-model="user.password" type="password">
+              </md-input-container>
+          </div>
+          <div layout="column" layout-padding>
+            <md-button flex class="md-raised md-accent" type="submit">
+              LOGIN
+            </md-button>
+          </div>
+        </form>
+      </div>
+    </md-content>
+
+  </md-content>
+</div>
