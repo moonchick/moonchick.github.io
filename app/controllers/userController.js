@@ -69,7 +69,7 @@
         }
 
         $scope.correlation = function () {
-            window.open('https://chickensavior.azurewebsites.net/', '_blank')
+            window.open('https://chicken-soul-cl.herokuapp.com/', '_blank')
         }
     }
 })()
