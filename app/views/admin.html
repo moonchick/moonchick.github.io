@@ -1,0 +1,182 @@
+<div ng-controller="adminController as vm" md-theme="tabs">
+  <div ng-controller="BasicDemoCtrl as ctrl">
+    <md-content layout-padding>
+      <span class="md-headline">Data Ayam Mati dan Daily Feed</span>
+    </md-content>
+    <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="always" class="tabs-lantai">
+      <md-tab label="Cage 1" md-on-select="vm.onTabChanges(1)">        
+          <div class="table-responsive-vertical md-whiteframe-z1">
+            <table id="table" class="table table-hover table-bordered" md-theme="default">
+              <thead>
+                <tr>
+                  <th colspan="3">Downstair</th>
+                </tr>
+                <tr>
+                  <th>Date</th>
+                  <th>Broiler Mortality Total (broiler)	</th>
+                  <th>Daily Feed (kg/bag)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="data in vm.data">
+                  <td data-title="Date">
+                    <div ng-init="tanggal = vm.setTanggal(data.$id)">
+                      {{tanggal}}                              
+                    </div>
+                  </td>
+                  <td data-title="Ayam Mati">{{data.ayamMati}}</td>
+                  <td data-title="Daily Feed">{{data.pakan}}</td>        
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-responsive-vertical md-whiteframe-z1">
+            <table id="table" class="table table-hover table-bordered" md-theme="default">
+              <thead>
+                <tr>
+                  <th colspan="3">Upstair</th>
+                </tr>
+                <tr>
+                  <th>Date</th>
+                  <th>Broiler Mortality Total (broiler)	</th>
+                  <th>Daily Feed (kg/bag)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="data2 in vm.data2">
+                  <td data-title="Date">
+                    <div ng-init="tanggal = vm.setTanggal(data2.$id)">
+                      {{tanggal}}                              
+                    </div>
+                  </td>
+                  <td data-title="Ayam Mati">{{data2.ayamMati}}</td>
+                  <td data-title="Daily Feed">{{data2.pakan}}</td>        
+                </tr>
+              </tbody>
+            </table>
+          </div>       
+      </md-tab>
+
+      <md-tab label="Cage 2" md-on-select="vm.onTabChanges(2)">
+          <div class="table-responsive-vertical md-whiteframe-z1">
+            <table id="table" class="table table-hover table-bordered" md-theme="default">
+              <thead>
+                <tr>
+                  <th colspan="3">Downstair</th>
+                </tr>
+                <tr>
+                  <th>Date</th>
+                  <th>Broiler Mortality Total (broiler)	</th>
+                  <th>Daily Feed (kg/bag)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="data3 in vm.data3">
+                  <td data-title="Date">
+                    <div ng-init="tanggal = vm.setTanggal(data3.$id)">
+                      {{tanggal}}                              
+                    </div>
+                  </td>
+                  <td data-title="Ayam Mati">{{data3.ayamMati}}</td>
+                  <td data-title="Daily Feed">{{data3.pakan}}</td>          
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-responsive-vertical md-whiteframe-z1">
+            <table id="table" class="table table-hover table-bordered" md-theme="default">
+              <thead>
+                <tr>
+                  <th colspan="3">Upstair</th>
+                </tr>
+                <tr>
+                  <th>Date</th>
+                  <th>Broiler Mortality Total (broiler)	</th>
+                  <th>Daily Feed (kg/bag)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="data4 in vm.data4">
+                  <td data-title="Date">
+                    <div ng-init="tanggal = vm.setTanggal(data4.$id)">
+                      {{tanggal}}                              
+                    </div>
+                  </td>
+                  <td data-title="Ayam Mati">{{data4.ayamMati}}</td>
+                  <td data-title="Daily Feed">{{data4.pakan}}</td>          
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </md-tab>
+
+      <md-tab label="Cage 3" md-on-select="vm.onTabChanges(3)">
+          <div class="table-responsive-vertical md-whiteframe-z1">
+            <table id="table" class="table table-hover table-bordered" md-theme="default">
+              <thead>
+                <tr>
+                  <th colspan="3">Downstair</th>
+                </tr>
+                <tr>
+                  <th>Date</th>
+                  <th>Broiler Mortality Total (broiler)	</th>
+                  <th>Daily Feed (kg/bag)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="data5 in vm.data5">
+                  <td data-title="Date">
+                    <div ng-init="tanggal = vm.setTanggal(data5.$id)">
+                      {{tanggal}}                              
+                    </div>
+                  </td>
+                  <td data-title="Ayam Mati">{{data5.ayamMati}}</td>
+                  <td data-title="Daily Feed">{{data5.pakan}}</td>          
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-responsive-vertical md-whiteframe-z1">
+            <table id="table" class="table table-hover table-bordered" md-theme="default">
+              <thead>
+                <tr>
+                  <th colspan="3">Upstair</th>
+                </tr>
+                <tr>
+                  <th>Date</th>
+                  <th>Broiler Mortality Total (broiler)	</th>
+                  <th>Daily Feed (kg/bag)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="data6 in vm.data6">
+                  <td data-title="Date">
+                    <div ng-init="tanggal = vm.setTanggal(data6.$id)">
+                      {{tanggal}}                              
+                    </div>
+                  </td>
+                  <td data-title="Ayam Mati">{{data6.ayamMati}}</td>
+                  <td data-title="Daily Feed">{{data6.pakan}}</td>          
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </md-tab>       
+    </md-tabs>
+    <div ng-show="vm.lantai == 1">
+      <md-button class="md-fab" aria-label="Tambah" ng-click="ctrl.showDialogInput1($event)" md-theme="default">
+        <md-icon md-svg-src="assets/icons/add.svg"></md-icon>
+      </md-button>
+    </div>
+    <div ng-show="vm.lantai == 2">
+      <md-button class="md-fab" aria-label="Tambah" ng-click="ctrl.showDialogInput2($event)" md-theme="default">
+        <md-icon md-svg-src="assets/icons/add.svg"></md-icon>
+      </md-button>
+    </div>
+    <div ng-show="vm.lantai == 3">
+      <md-button class="md-fab" aria-label="Tambah" ng-click="ctrl.showDialogInput3($event)" md-theme="default">
+        <md-icon md-svg-src="assets/icons/add.svg"></md-icon>
+      </md-button>
+    </div>
+  </div>
+</div>    

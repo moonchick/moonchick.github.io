@@ -1,0 +1,30 @@
+<!-- TODO: Add validations -->
+<md-content layout-padding>
+      <span class="md-headline">Form Tambah Admin</span>
+    </md-content>
+<md-content class="md-padding" layout-padding style="width:60%;">    
+    <form ng-submit="vm.addAdmin()">
+        <div layout layout-sm="column">
+            <md-input-container flex>
+                <label>Nama Depan</label>
+                <input ng-model="vm.user.nama" type="text">
+            </md-input-container>
+        </div>
+        <div layout layout-sm="column">
+            <md-input-container flex>
+                <label>No.RFID</label>
+                <input ng-model="vm.user.email" type="text">
+            </md-input-container>
+        </div>
+        <div layout layout-sm="column">
+            <md-input-container flex>
+                <label>Password</label>
+                <input ng-model="vm.user.password" type="password">
+            </md-input-container>
+        </div>
+        <div layout layout-sm="column">
+            <span flex></span>
+            <md-button class="md-raised md-accent" type="submit">Submit</md-button>
+        </div>
+    </form>
+</md-content>

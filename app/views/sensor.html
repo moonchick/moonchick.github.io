@@ -1,0 +1,28 @@
+<div ng-controller="BasicDemoCtrl as ctrl">
+    <md-content class="md-padding" layout-padding>
+    	<div class="table-responsive-vertical md-whiteframe-z1">
+        <table id="table" class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th>No. Sensor</th>
+                <th>Lantai</th>
+                <th>Kode Sensor</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="grid in vm.sensor">
+                <td data-title="Rfid">{{grid.$id}}</td>
+                <td data-title="Lantai">{{grid.lantai}}</td>
+                <td data-title="Posisi">{{grid.tipe}}</td>
+                <td>
+                  <md-button class="md-raised md-accent"
+                             ng-click="ctrl.showDialog($event); panel.getId(grid.$id)">Edit
+                  </md-button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+      </div>
+    </md-content>
+</div>

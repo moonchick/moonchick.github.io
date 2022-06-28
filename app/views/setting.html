@@ -1,0 +1,27 @@
+<div ng-controller="BasicDemoCtrl as ctrl">
+  <div ng-repeat="kd in grafik">
+    <div style="width: 100%;flex-direction: row;flex-wrap: wrap; background: white;">
+      <span class="md-headline" style="font-size: 18px;margin: 8px;">{{kd.namaKandang}}</span>
+      <div layout="column" style="border: 1px solid #ddd;width:49%;margin:6px;">
+        <md-grid-list
+          md-cols="{{kd.jmlKolom}}"
+          md-row-height="2:3"
+          md-gutter="12px">
+
+          <md-grid-tile ng-repeat="grid in kandang | orderBy:'posisi' | filter: { idKandang: $index+1 }"
+                        ng-click="ubahGrid(grid.$id, grid.idGrid, grid.idKandang, grid.namaKandang, grid.posisi, $event)">
+
+            <md-grid-tile-footer class="footer">
+              <h4>{{grid.idGrid}}</h4>
+            </md-grid-tile-footer>
+
+          </md-grid-tile>
+        </md-grid-list>
+      </div>
+    </div>
+  </div>
+   
+  <md-button class="md-fab" aria-label="Tambah" ng-click="ctrl.showDialogTambahKandang($event)" md-theme="default">
+    <md-icon md-svg-src="assets/icons/add.svg"></md-icon>
+  </md-button>
+</div>  

@@ -1,0 +1,53 @@
+<div ng-controller="adminController as vm">
+  <div role="dialog" aria-label="Tambah Data" layout="column" layout-align="center center">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2 style="color: white;">Add Data Cage 3 Downstair</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="Close" ng-click="ctrl.closeDialog()">
+          <md-icon md-svg-icon="assets/icons/close.svg"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <div class="demo-dialog-content">
+      <form name="form" ng-submit="vm.tambahDataK2()">
+        <div layout="row">
+          <div style="margin-top: 24px;">
+            <md-datepicker ng-model="vm.tanggal" ng-change="vm.change()" md-placeholder="Date"></md-datepicker>
+          </div>
+          <h4 style="font-weight:400;margin:36px;">Day- : {{vm.dateKandang5}}</h4>
+        </div>
+        <div layout="row">
+          <md-input-container flex style="margin-top: 36px;">
+            <label>Broiler Mortality Total (broiler)	</label>
+            <input ng-model="vm.data.ayamMati" ng-init="vm.data.ayamMati=0" type="number" name="ayamMati" min="0">
+
+            <div ng-messages="form.ayamMati.$error" multiple md-auto-hide="false">
+              <div ng-message="min">
+                Broiler Mortality Total must not less than 0
+              </div>
+            </div>
+          </md-input-container>
+        </div>
+        <div layout="row">
+          <md-input-container flex>
+            <label>Daily Feed (kg/bag)</label>
+            <input ng-model="vm.data.pakan" ng-init="vm.data.pakan=0" type="number" name="pakan" min="0">
+
+            <div ng-messages="form.pakan.$error" multiple md-auto-hide="false">
+              <div ng-message="min">
+                Daily Feed must not less than 0.
+              </div>
+            </div>
+          </md-input-container>
+        </div>
+        <span flex></span>
+        <md-button class="md-raised md-accent" 
+                   type="submit" ng-click="ctrl.closeDialog()">
+          Save
+        </md-button>
+      </form>
+    </div>
+  </div>
+</div>

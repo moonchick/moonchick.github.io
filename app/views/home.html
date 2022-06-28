@@ -1,0 +1,53 @@
+<div ng-controller="kandangController as vm">
+	<md-content layout-padding>
+		<md-content class="home">
+			<div class="home-content">
+        <div ng-repeat="kandang in vm.kandang">
+          <a ui-sref="menu.dashboard({index: $index+1})" style="text-decoration:none;">
+            <div class="home-baloon" ng-click="vm.setKandang($index+1)">
+              <h1>{{kandang.namaKandang}}</h1>
+              <span >Day-{{kandang.perhitungan.hari}}</span>
+              <span class="time">Last Update : {{kandang.perhitungan.lastupdate}}</span>
+
+              <div layout="row">
+                <div class="box">
+                  <div layout="column">
+                    <span>FCR</span>
+                    <div layout="row">
+                      <span class="box-number">{{kandang.perhitungan.fcr}}<span>
+                      <img src="assets/down-arrow.png" style="width:20px;margin-left:12px;"
+                           ng-show="kandang.perhitungan.fcr < kandang.perhitungan.fcrk">
+                      <img src="assets/up-arrow.png" style="width:25px;margin-left:12px;"
+                           ng-show= "kandang.perhitungan.fcr > kandang.perhitungan.fcrk">
+                    </div>
+                  </div>
+                </div>
+                <div class="box">
+                  <div layout="column">
+                    <span>IP</span>
+                    <div layout="row">
+                      <span class="box-number">{{kandang.perhitungan.ip}}<span>
+                      <img src="assets/down-arrow.png" style="width:20px;margin-left:12px;"
+                           ng-show="kandang.perhitungan.ip < kandang.perhitungan.ipk">
+                      <img src="assets/up-arrow.png" style="width:25px;margin-left:12px;"
+                           ng-show= "kandang.perhitungan.ip > kandang.perhitungan.ipk">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div layout="column" class="summary">
+                <span>Average Weight <B>{{kandang.perhitungan.berat}} gram</B></span>
+                <span>Temperature <B>{{kandang.perhitungan.suhu}} &deg;C</B></span>
+                <span>Humidity <B>{{kandang.perhitungan.kelembapan}} %</B></span>
+                <span>Feels Like <B>{{kandang.perhitungan.feelslike}} &deg;C</B></span>
+                <span>NH3 <B>{{kandang.perhitungan.NH3}} ppm</B></span>
+                <!-- <span>Broiler Mortality Total <B>{{kandang.perhitungan.prediksi}} ekor</B></span> -->
+              </div>
+            </div>
+          </a>
+        </div>
+			</div>
+		</md-content>
+	</md-content>
+</div>
